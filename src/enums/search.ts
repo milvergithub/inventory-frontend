@@ -1,3 +1,4 @@
+// @ts-ignore
 export const enum Search {
 	// Numerics
 	Equal = "eq",
