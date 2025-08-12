@@ -5,9 +5,11 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     return (
         <SidebarProvider>
             <AppSidebar />
-            <main className="w-full p-4 ">
+            <main className="w-full bg-background">
                 <SidebarTrigger />
-                {children}
+                <div className="m-8">
+                    {children}
+                </div>
             </main>
         </SidebarProvider>
     )
