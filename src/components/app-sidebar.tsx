@@ -34,6 +34,11 @@ const items: MenuItem[] = [
         icon: User,
     },
     {
+        title: "Suppliers",
+        path: "suppliers",
+        icon: Users,
+    },
+    {
         title: "Settings",
         path: "#",
         icon: Settings,
