@@ -4,6 +4,8 @@ import MainLayout from "@/components/layout/mainLayout.tsx";
 import DashboardPage from "@/pages/dashboard/dashboardPage.tsx";
 import ErrorPage from "@/components/common/errorPage.tsx";
 import ProductListPage from "@/pages/products/productListPage.tsx";
+import PartnerListPage from "@/pages/partners/partnerListPage.tsx";
+import UserListPage from "@/pages/users/userListPage.tsx";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +24,14 @@ export const router = createBrowserRouter([
             {
                 path: "products",
                 element: <ProductListPage />
+            },
+            {
+                path: "partners",
+                element: <PartnerListPage />
+            },
+            {
+                path: "users",
+                element: <UserListPage />
             }
         ]
     },

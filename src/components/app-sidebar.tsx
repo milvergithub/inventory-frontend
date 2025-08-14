@@ -4,36 +4,41 @@ import {
     SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
     SidebarMenu, SidebarMenuButton, SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Calendar, Inbox, Search, Settings, Component } from "lucide-react";
+import { Settings, Tag, Package, Users, User } from "lucide-react";
 
+type MenuItem = {
+    title: string;
+    path: string;
+    icon: any
+};
 // Menu items.
-const items = [
+const items: MenuItem[] = [
     {
         title: "Categorias",
-        url: "categories",
-        icon: Component,
+        path: "categories",
+        icon: Tag,
     },
     {
         title: "Productos",
-        url: "products",
-        icon: Inbox,
+        path: "products",
+        icon: Package,
     },
     {
-        title: "Clientes",
-        url: "clients",
-        icon: Calendar,
+        title: "Partners",
+        path: "partners",
+        icon: Users,
     },
     {
         title: "Usuarios",
-        url: "users",
-        icon: Search,
+        path: "users",
+        icon: User,
     },
     {
         title: "Settings",
-        url: "#",
+        path: "#",
         icon: Settings,
     },
-]
+];
 export function AppSidebar() {
     return (
         <Sidebar>
@@ -45,7 +50,7 @@ export function AppSidebar() {
                             {items.map((item) => (
                                 <SidebarMenuItem key={item.title}>
                                     <SidebarMenuButton asChild>
-                                        <a href={item.url}>
+                                        <a href={item.path}>
                                             <item.icon />
                                             <span>{item.title}</span>
                                         </a>
