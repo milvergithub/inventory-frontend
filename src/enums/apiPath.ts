@@ -6,4 +6,5 @@ export const enum ApiPath {
     Users = 'api/v1/users',
     Warehouses = 'api/v1/warehouses',
     Suppliers = 'api/v1/suppliers',
+    InventoryBalances = 'api/v1/inventory-balances',
 }

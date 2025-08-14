@@ -7,6 +7,7 @@ import ProductListPage from "@/pages/products/productListPage.tsx";
 import PartnerListPage from "@/pages/partners/partnerListPage.tsx";
 import UserListPage from "@/pages/users/userListPage.tsx";
 import SupplierListPage from "@/pages/supplier/supplierListPage.tsx";
+import InventoryBalanceListPage from "@/pages/inventoryBalance/inventoryBalanceListPage.tsx";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: "suppliers",
                 element: <SupplierListPage />
+            },
+            {
+                path: "inventories",
+                element: <InventoryBalanceListPage />
             }
         ]
     },
