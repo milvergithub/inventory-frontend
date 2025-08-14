@@ -4,28 +4,28 @@ import {
     SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
     SidebarMenu, SidebarMenuButton, SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import {Calendar, Home, Inbox, Search, Settings} from "lucide-react";
+import { Calendar, Inbox, Search, Settings, Component } from "lucide-react";
 
 // Menu items.
 const items = [
     {
-        title: "Home",
-        url: "#",
-        icon: Home,
+        title: "Categorias",
+        url: "categories",
+        icon: Component,
     },
     {
-        title: "Inbox",
-        url: "#",
+        title: "Productos",
+        url: "products",
         icon: Inbox,
     },
     {
-        title: "Calendar",
-        url: "#",
+        title: "Clientes",
+        url: "clients",
         icon: Calendar,
     },
     {
-        title: "Search",
-        url: "#",
+        title: "Usuarios",
+        url: "users",
         icon: Search,
     },
     {

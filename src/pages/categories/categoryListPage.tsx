@@ -3,8 +3,10 @@ import type { CategorySearchRequest } from "@/interfaces/searchRequests/category
 import { Sort } from "@/enums/sort.ts";
 import DataTable, { type Column } from "@/components/common/dataTable.tsx";
 import type { Category } from "@/interfaces/models/category.ts";
-import { Component } from "lucide-react";
+import {Component, EllipsisVertical} from "lucide-react";
 import { PageTitle } from "@/components/common/pageTitle.tsx";
+import {Button} from "@/components/ui/button.tsx";
+import {Icon} from "@/components/ui/icon.tsx";
 
 const defaultRequest: CategorySearchRequest = {
     sort: { name: Sort.Asc },
@@ -25,6 +27,22 @@ export default function CategoryListPage() {
         {
             header: "DESCRIPTION",
             cell: (itm: Category) => itm.description
+        },
+        {
+            header: "",
+            cell: (itm: Category) => (
+                <Button
+                    variant="ghost"
+                    onClick={() => {
+                        console.log(itm)
+                    }}
+                >
+                    <Icon icon={EllipsisVertical} className="size-6" />
+                </Button>
+            ),
+            className: {
+                header: "w-16"
+            }
         }
     ]
     return (
